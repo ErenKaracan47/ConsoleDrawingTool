@@ -24,12 +24,18 @@
     <ClCompile Include="Pixel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Shape.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Canvas.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="Pixel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

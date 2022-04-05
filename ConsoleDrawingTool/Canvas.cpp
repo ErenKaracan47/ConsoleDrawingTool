@@ -11,7 +11,7 @@ Canvas::Canvas(int _rowcount, int _columncount)
 
 		for (int rowindex = 0; rowindex < rowcount; rowindex++)
 		{
-			pixelmap[colindex].push_back(Pixel(rowindex + 1, colindex + 1, Pixel::Strength::Blank));
+			pixelmap[colindex].push_back(Pixel(rowindex, colindex, Pixel::Strength::Blank));
 		}
 	}
 }
@@ -60,5 +60,16 @@ void Canvas::fillBounds(char _char)
 	{
 		pixelmap[columnindex][0].changePixelChar(_char);
 		pixelmap[columnindex][rowcount - 1].changePixelChar(_char);
+	}
+}
+
+void Canvas::placeShapeonCanvas(Shape _shape, int _rowoffset, int _coloffset)
+{
+	for (int rowindex = 0; rowindex < _shape.getRowCount(); rowindex++)
+	{
+		for (int colindex = 0; colindex < _shape.getColumnCount(); colindex++)
+		{
+			pixelmap[rowindex + _rowoffset][colindex + _coloffset].changePixelChar(_shape.shapemap[rowindex][colindex].pixelchar);
+		}
 	}
 }

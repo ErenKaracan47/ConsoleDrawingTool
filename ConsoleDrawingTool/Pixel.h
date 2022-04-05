@@ -14,6 +14,8 @@ public:
 	};
 
 	Pixel(int _row, int _col, Strength _str);
+	Pixel(int _row, int _col, char _char);
+	Pixel(char _char);
 	~Pixel();
 
 	void changePixelStrength(Strength _str);

@@ -9,6 +9,22 @@ Pixel::Pixel(int _row, int _col, Strength _str)
 	matchPixelChartoStrength();
 }
 
+Pixel::Pixel(int _row, int _col, char _char)
+{
+	pixelrow = _row;
+	pixelcolumn = _col;
+	pixelstrength = Strength::Custom;
+	pixelchar = _char;
+}
+
+Pixel::Pixel(char _char)
+{
+	pixelrow = -1;
+	pixelcolumn = -1;
+	pixelstrength = Strength::Custom;
+	pixelchar = _char;
+}
+
 Pixel::~Pixel()
 {
 }

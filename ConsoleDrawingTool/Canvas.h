@@ -3,6 +3,7 @@
 #include <iostream>
 #include <vector>
 #include "Pixel.h"
+#include "Shape.h"
 
 class Canvas
 {
@@ -14,6 +15,8 @@ public:
 
 	void fillBounds(Pixel::Strength _str);
 	void fillBounds(char _char);
+
+	void placeShapeonCanvas(Shape _shape, int _rowoffset, int _coloffset);
 
 private:
 
