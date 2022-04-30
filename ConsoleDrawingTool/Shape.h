@@ -23,6 +23,8 @@ public:
 
 	void createLine(int _width, int _height, char _char);
 
+	void createTriangle(int _base, char _char, bool _fill, bool _doublespace);
+
 	int getRowCount();
 	int getColumnCount();
 

@@ -18,6 +18,12 @@ void Shape::createLine(int _width, int _height, char _char)
 	columncount = _width;
 }
 
+void Shape::createTriangle(int _base, char _char, bool _fill, bool _doublespace)
+{
+	
+
+}
+
 int Shape::getRowCount()
 {
 	return rowcount;
