@@ -26,10 +26,12 @@ void Canvas::Render()
 	{
 		for (int rowindex = 0; rowindex < rowcount; rowindex++)
 		{
-			std::cout << pixelmap[colindex][rowindex].pixelchar;
+			putchar(pixelmap[colindex][rowindex].pixelchar);
 		}
 
-		std::cout << "\n";
+		//printf("\x1B[1E\x1B[0d"); //TODO: renderdan önce setup kýsmýnda canvas kadar whitespace olsun. var olmayan space'de cursor down yapamýyoruz.
+
+		putchar('\n');
 	}
 }
 
