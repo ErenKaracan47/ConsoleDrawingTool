@@ -9,14 +9,16 @@ int main() {
 	Canvas canv(50, 50);
 	canv.fillBounds('E');
 	Shape line = Shape();
-	line.createLine(50, 2, '#');
+	line.createLine(8, 1, '#');
 
-	for (int i = 0; i < 48; i++)
+	for (int i = 1; i < 48; i++)
 	{
-		printf("\x1b[0;0H");
-		canv.placeShapeonCanvas(line, i, 0);
+		
+		//canv.placeShapeonCanvas(line, fmod(i, 48), 1);
+		canv.placeShapeonCanvas(line, ((rand() % 40) + 2), 1);
+
 		canv.Render();
-		Sleep(16);
+		//Sleep(0);
 	}
 
 	

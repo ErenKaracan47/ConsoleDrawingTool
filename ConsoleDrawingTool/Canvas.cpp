@@ -22,16 +22,20 @@ Canvas::~Canvas()
 
 void Canvas::Render()
 {
-	for (int colindex = 0; colindex < columncount; colindex++)
+
+	printf("\x1b[0;0H");
+
+	for (int rowindex = 0; rowindex < rowcount; rowindex++)
 	{
-		for (int rowindex = 0; rowindex < rowcount; rowindex++)
+		for (int colindex = 0; colindex < columncount; colindex++)
 		{
-			putchar(pixelmap[colindex][rowindex].pixelchar);
+			putchar(pixelmap[rowindex][colindex].pixelchar);
 		}
 
-		//printf("\x1B[1E\x1B[0d"); //TODO: renderdan önce setup kısmında canvas kadar whitespace olsun. var olmayan space'de cursor down yapamıyoruz.
+		printf("\x1B[1B\x1B[0G"); //TODO: renderdan önce setup kısmında canvas kadar whitespace olsun. var olmayan space'de cursor down yapamıyoruz.
 
-		putchar('\n');
+		//putchar('\n');
+
 	}
 }
 
